@@ -1,0 +1,12 @@
+{
+  "name": "PetShop",
+  "displayName": "PetShop",
+  "expo": {
+    "name": "PetShop",
+    "slug": "PetShop",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

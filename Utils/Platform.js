@@ -1,0 +1,32 @@
+import { Platform, Dimensions, StatusBar } from 'react-native'
+
+const X_WIDTH = 375
+const X_HEIGHT = 812
+const XSMAX_WIDTH = 414
+const XSMAX_HEIGHT = 896
+const IPHONE12_WIDTH = 390
+const IPHONE12_HEIGHT = 844
+const IPHONE12_PROMAX_WIDTH = 428
+const IPHONE12_PROMAX_HEIGHT = 926
+
+export function isIPhoneDeviceWithNotch () {
+  const { width: screenWidth, height: screenHeight } = Dimensions.get('window')
+
+  return (
+    Platform.OS === 'ios' &&
+    ((screenHeight === X_HEIGHT && screenWidth === X_WIDTH) ||
+      (screenHeight === XSMAX_HEIGHT && screenWidth === XSMAX_WIDTH) ||
+      (screenHeight === IPHONE12_HEIGHT && screenWidth === IPHONE12_WIDTH) ||
+      (screenHeight === IPHONE12_PROMAX_HEIGHT &&
+        screenWidth === IPHONE12_PROMAX_WIDTH))
+  )
+}
+
+export function isAndroidDeviceWithNotch () {
+  return Platform.OS === 'android' && StatusBar.currentHeight > 24
+}
+
+export function isSmallDevice () {
+  const { width: screenWidth } = Dimensions.get('window')
+  return screenWidth < 330
+}

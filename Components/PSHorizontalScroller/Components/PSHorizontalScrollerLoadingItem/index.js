@@ -1,0 +1,3 @@
+import PSHorizontalScrollerLoadingItem from './PSHorizontalScrollerLoadingItem'
+
+export default PSHorizontalScrollerLoadingItem

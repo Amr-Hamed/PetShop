@@ -1,0 +1,32 @@
+const icons = {
+  passwordInputVisible: 'eye',
+  passwordInputNotVisible: 'eye-off',
+  loginTabPhoneNumberInput: 'phone',
+  loginTabPasswordInputLeft: 'lock',
+  signupTabPhoneNumberInput: 'phone',
+  signupTabNameInput: 'account',
+  signupTabEmailInput: 'email',
+  signupTabPasswordInputLeft: 'lock',
+  signupTabConfirmPasswordInputLeft: 'lock',
+  drawer: 'format-list-bulleted',
+  cart: 'cart',
+  favSelected: 'cards-heart',
+  favUnselected: 'heart-outline',
+  ratingUnSelected: 'star-outline',
+  ratingSelected: 'star',
+  backButton: 'keyboard-backspace',
+  closeButton: 'close',
+  deleteBin: 'trash-can',
+  pencil: 'pencil',
+  addressFirstInputLeft: 'account',
+  addressSecondInputLeft: 'home-city',
+  addressThirdInputLeft: 'road',
+  addressForthInputLeft: 'home',
+  bankCardFirstInputLeft: 'credit-card',
+  bankCardSecondInputLeft: 'calendar-today',
+  bankCardThirdInputLeft: 'lock-smart',
+  bankCardForthInputLeft: 'account-box',
+  tick: 'check-bold'
+}
+
+export default icons
