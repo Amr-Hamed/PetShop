@@ -22,7 +22,27 @@ const Images = {
   fish4: require('./fish4.png'),
   noItems: require('./noItems.png'),
   bankCard: require('./bankCard.png'),
-  cartoonCat: require('./cartoonCat.png')
+  cartoonCat: require('./cartoonCat.png'),
+  dogacc1: require('./dogacc1.png'),
+  dogacc2: require('./dogacc2.png'),
+  dogacc3: require('./dogacc3.png'),
+  dogacc4: require('./dogacc4.png'),
+  catacc1: require('./catacc1.png'),
+  catacc2: require('./catacc2.png'),
+  catacc3: require('./catacc3.png'),
+  catacc4: require('./catacc4.png'),
+  birdacc1: require('./birdacc1.png'),
+  birdacc2: require('./birdacc2.png'),
+  birdacc3: require('./birdacc3.png'),
+  birdacc4: require('./birdacc4.png'),
+  reptileacc1: require('./reptileacc1.jpeg'),
+  reptileacc2: require('./reptileacc2.jpeg'),
+  reptileacc3: require('./reptileacc3.jpeg'),
+  reptileacc4: require('./reptileacc4.jpeg'),
+  fishacc1: require('./fishacc1.png'),
+  fishacc2: require('./fishacc2.jpg'),
+  fishacc3: require('./fishacc3.jpg'),
+  fishacc4: require('./fishacc4.png')
 }
 
 export default Images

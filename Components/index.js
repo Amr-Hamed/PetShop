@@ -12,6 +12,7 @@ import PSRating from './PSRating'
 import PSCartItem from './PSCartItem'
 import PSQuantityCounter from './PSQuantityCounter'
 import PSInfoItem from './PSInfoItem'
+import PSVerticalScroller from './PSVerticalScroller'
 
 export {
   PSScreen,
@@ -27,5 +28,6 @@ export {
   PSRating,
   PSCartItem,
   PSQuantityCounter,
-  PSInfoItem
+  PSInfoItem,
+  PSVerticalScroller
 }

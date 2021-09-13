@@ -54,7 +54,7 @@ export default StyleSheet.create({
     color: Colors.mainYellow
   },
   resultTitle: {
-    fontSize: height * 0.04,
+    fontSize: height * 0.03,
     fontWeight: 'bold',
     marginTop: height * 0.03,
     color: Colors.white,

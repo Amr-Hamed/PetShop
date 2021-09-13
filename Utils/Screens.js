@@ -7,5 +7,6 @@ export default Object.freeze({
   Checkout: 'Checkout',
   Address: 'Address',
   BankCard: 'BankCard',
-  CheckoutResult: 'CheckoutResult'
+  CheckoutResult: 'CheckoutResult',
+  Orders: 'Orders'
 })

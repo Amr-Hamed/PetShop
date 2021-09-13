@@ -15,7 +15,8 @@ export default StyleSheet.create({
     },
     divider: {
         marginVertical: 20,
-        marginHorizontal: 10
+        width: '95%',
+        alignSelf: 'center'
     },
     homeCategoriesTitle: {
         fontSize: 18,
@@ -24,5 +25,13 @@ export default StyleSheet.create({
     },
     categoriesScroller: {
         marginTop: 15
+    },
+    petsScroller: {
+        marginBottom: 10
+    },
+    accTitle: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginLeft: 10
     }
 })

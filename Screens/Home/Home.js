@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Text } from 'react-native'
-import { size as _size, has as _has } from 'lodash'
+import { has as _has } from 'lodash'
 
-import { PSScreen, PSDivider, PSHorizontalScroller } from '../../Components'
+import { PSScreen, PSDivider, PSHorizontalScroller, PSVerticalScroller } from '../../Components'
 import { strings, Images } from '../../Assets'
 import { CATEGORIES, Types, SCREENS } from '../../Utils'
 
@@ -58,6 +58,35 @@ const _categories = [{
     color: 'Golden/Black',
     height: 0.75,
     description: 'The ideal Rottweiler is a medium large, robust and powerful dog, black with clearly defined rust markings. His compact and substantial build denotes great strength, agility and endurance.'
+  }],
+  accessories: [{
+    id: 1,
+    image: Images.dogacc1,
+    name: 'Dog leash',
+    price: 30,
+    color: 'Colorful',
+    description: 'Dog\'s leash helps owner control the dog while going for a walk outside.'
+  },{
+    id: 2,
+    image: Images.dogacc2,
+    name: 'Dog swim Jacket',
+    price: 40,
+    color: 'Yellow',
+    description: 'Dog\'s swim jacket helps the dog to float in the water while swimming, it\'s very useful'
+  },{
+    id: 1,
+    image: Images.dogacc3,
+    name: 'Dog Food',
+    price: 15,
+    color: 'Brown',
+    description: 'Dry food for the dog, it\'s rich with all the nutritions that the dog needs to be healthy'
+  },{
+    id: 1,
+    image: Images.dogacc1,
+    name: 'Dog Comb',
+    price: 5,
+    color: 'Blue/Pink',
+    description: 'Dog\'s comb helps comb the hair of the dog, maintaining clean, stylish hair for your dog'
   }]
 }, {
   id: 3,
@@ -108,7 +137,36 @@ const _categories = [{
       height: 0.4,
       description: 'The Himalayan is an extreme looking breed. The body is short but thick with thick legs and a short, thick neck. The boning is heavy but the tail is short and the ears are small. The head of the Himalayan is round and has large, round eyes. When viewed in profile, the face is flat with the nose changing direction so that you see primarily the colored skin on the nose (nose leather).'
     }
-  ]
+  ],
+  accessories: [{
+    id: 5,
+    image: Images.catacc1,
+    name: 'Cat comb',
+    price: 30,
+    color: 'Colorful',
+    description: 'Cat\'s comb helps comb the hair of the cat, maintaining clean, stylish hair for your cat'
+  },{
+    id: 6,
+    image: Images.catacc2,
+    name: 'Cat food',
+    price: 20,
+    color: 'Brown',
+    description: 'Dry food for the cat, it\'s rich with all the nutritions that the cat needs to be healthy'
+  },{
+    id: 7,
+    image: Images.catacc3,
+    name: 'Cat leash',
+    price: 25,
+    color: 'Brown',
+    description: 'Cat\'s leash helps owner control the cat while going for a walk outside.'
+  },{
+    id: 8,
+    image: Images.catacc4,
+    name: 'Cat liter box',
+    price: 50,
+    color: 'Red',
+    description: 'Cat\'s liter box is where the cat can go to the bathroom in, uses special kind of sand that absorbs the scent to keep the home smelling good'
+  }]
 }, {
   id: 4,
   key: CATEGORIES.birds,
@@ -158,7 +216,36 @@ const _categories = [{
       height: 0.8,
       description: 'Owls are birds from the order Strigiformes /ˈstrɪdʒɪfɔːrmiːz/, which includes over 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight.'
     }
-  ]
+  ],
+  accessories: [{
+    id: 9,
+    image: Images.birdacc1,
+    name: 'Bird food',
+    price: 15,
+    color: 'Brown',
+    description: 'Bird food that\'s full of nutritions for all kind of cage birds, they love it and it\'s easy to add and remove'
+  },{
+    id: 10,
+    image: Images.birdacc2,
+    name: 'Bird cage',
+    price: 60,
+    color: 'Black',
+    description: 'Cage for birds, it\'s used to contain the birds inside the home, stylish and spacious'
+  },{
+    id: 11,
+    image: Images.birdacc3,
+    name: 'Bird stand',
+    price: 15,
+    color: 'Brown/Black',
+    description: 'Bird stand is a very useful bird accessory, the bird can be set free in the home and stands on it for a rest'
+  },{
+    id: 12,
+    image: Images.birdacc4,
+    name: 'Bird stand with bells',
+    price: 20,
+    color: 'Brown',
+    description: 'Bird stand is a very useful bird accessory, the bird can be set free in the home and stands on it for a rest, it has bells for bird amusement'
+  }]
 }, {
   id: 5,
   key: CATEGORIES.reptiles,
@@ -208,7 +295,36 @@ const _categories = [{
       height: 4.8,
       description: 'The American crocodile has a large lizard-like body with four short legs and a long muscular tail. Their hides are rough and scaled. Juvenile American crocodiles are dark olive brown with darker cross-bands on tail and body, while adults are uniformly brown with darker cross-bands on tail.'
     }
-  ]
+  ],
+  accessories: [{
+    id: 13,
+    image: Images.reptileacc1,
+    name: 'Reptile leash',
+    price: 25,
+    color: 'Cyan',
+    description: 'Reptile\'s leash helps owner control the reptile while going for a walk outside.'
+  },{
+    id: 14,
+    image: Images.reptileacc2,
+    name: 'Reptile cage',
+    price: 60,
+    color: 'Black',
+    description: 'Cage for reptile, it\'s used to contain the reptiles inside the home, stylish and spacious'
+  },{
+    id: 15,
+    image: Images.reptileacc3,
+    name: 'Reptile food',
+    price: 20,
+    color: 'Brown',
+    description: 'Reptile food that\'s full of nutritions for all kind of reptiles, they love it and it\'s easy to add and remove'
+  },{
+    id: 16,
+    image: Images.reptileacc4,
+    name: 'Reptiles cleaner',
+    price: 25,
+    color: 'Blue',
+    description: 'Reptile cleaner, a shampoo used for cleaning the dirt of your reptile and keeping it clean and shinny'
+  }]
 }, {
   id: 6,
   key: CATEGORIES.fish,
@@ -258,7 +374,36 @@ const _categories = [{
       height: 2.5,
       description: 'Seahorses are an upright fish. Rather than a head out front and a tail in back, these creatures “stand” in the water column. They have a horse-shaped head, with a long snout and puckered mouth. They swim using the dorsal fin on their backs, and steer using the pectoral fins on either side of their heads.'
     }
-  ]
+  ],
+  accessories: [{
+    id: 17,
+    image: Images.fishacc1,
+    name: 'Fish tank',
+    price: 80,
+    color: 'Black',
+    description: 'Tank for the fish, considered home for your pet fish, portable and stylish and has some cool decorations'
+  },{
+    id: 18,
+    image: Images.fishacc2,
+    name: 'Fish food',
+    price: 10,
+    color: 'Colorful',
+    description: 'Fish food that\'s full of nutritions for all kind of fish, they love it and it\'s easy to add'
+  },{
+    id: 19,
+    image: Images.fishacc3,
+    name: 'Fish tank decoration',
+    price: 20,
+    color: 'Brown/Green',
+    description: 'A piece of decoration to be placed inside your fish tank, the fish to play around and go in and out of it'
+  },{
+    id: 20,
+    image: Images.fishacc4,
+    name: 'Fish tank air tube',
+    price: 10,
+    color: 'Transparent',
+    description: 'You need this piece to pass air inside your fish tank, it\'s supported with a small compressor to push air into your fish tank to renew oxygen'
+  }]
 }]
 
 const onPetItemPress = (item, navigation) => {
@@ -268,21 +413,26 @@ const onPetItemPress = (item, navigation) => {
 export default function Home ({
   navigation
 }) {
-  const [areCategoriesLoading, setAreCaegoriesLoading] = useState(true)
+  const [areCategoriesLoading, setAreCategoriesLoading] = useState(true)
   const [categories, setCategories] = useState([])
   const [tourPets, setTourPets] = useState([])
+  const [accessories, setAccessories] = useState([])
 
   useEffect(() => {
     try {
       setTimeout(async () => {
         const _pets = []
+        const _accessories = []
         for (let i = 0; i < _categories.length; i++) {
           _has(_categories[i], 'pets') && _pets.push(..._categories[i].pets)
+          _has(_categories[i], 'accessories') && _accessories.push(..._categories[i].accessories)
         }
         setCategories(_categories)
         setTourPets(_pets)
-        setAreCaegoriesLoading(false)
+        setAccessories(_accessories)
+        setAreCategoriesLoading(false)
       }, 3000)
+
     } catch (error) {
       console.log('error')
     }
@@ -303,9 +453,19 @@ export default function Home ({
         type={Types.HORIZONTAL_SCROLLER_TYPES.PETS}
         data={tourPets}
         isLoading={areCategoriesLoading}
-        style={styles.setsScroller}
+        style={styles.petsScroller}
         onItemPress={(item) => onPetItemPress(item, navigation)}
         onFavIconPress={() => {}}
+      />
+      <PSDivider style={styles.divider} />
+      <Text style={styles.accTitle}>{strings.homeAccTitle}</Text>
+      <PSVerticalScroller
+        data={accessories}
+        isLoading={false}
+        style={styles.accessoriesScroller}
+        numOfColumns={2}
+        onItemPress={{}}
+        onFavIconPress={{}}
       />
     </PSScreen>
   )

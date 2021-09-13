@@ -7,6 +7,7 @@ import Checkout from './Checkout'
 import Address from './Address'
 import BankCard from './BankCard'
 import CheckoutResult from './CheckoutResult'
+import Orders from './Orders'
 
 export {
   Auth,
@@ -17,5 +18,6 @@ export {
   Checkout,
   Address,
   BankCard,
-  CheckoutResult
+  CheckoutResult,
+  Orders
 }

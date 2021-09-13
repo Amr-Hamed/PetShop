@@ -5,10 +5,18 @@ import { isFunction as _isFunction } from 'lodash'
 
 import { icons, Images, Colors } from '../../Assets'
 import styles from './PSHeader.js.style'
-import { Types } from '../../Utils'
+import { Types, SCREENS } from '../../Utils'
 import PSLinearGradientBackground from '../PSLinearGradientBackground'
 
+const _onRightIconPress = (onRightIconPress, navigation) => {
+  if (_isFunction(onRightIconPress)) {
+    return onRightIconPress()
+  }
+  navigation.push(SCREENS.Orders)
+}
+
 export default function PSHeader ({
+  navigation,
   type,
   withImageBackground,
   withIconsLinearGradient,
@@ -60,25 +68,25 @@ export default function PSHeader ({
           style={styles.logo}
         />}
       {withRightIcon && (
-        <TouchableOpacity onPress={onRightIconPress}>
+        <TouchableOpacity onPress={() => _onRightIconPress(onRightIconPress, navigation)}>
           <>{_isFunction(renderRightIcon) ? renderRightIcon() : (
             <>
               {withIconsLinearGradient ? (
-              <PSLinearGradientBackground>
+                <PSLinearGradientBackground>
+                  <Icon
+                    name={_rightIconName}
+                    size={rightIconSize}
+                    color={Colors.white}
+                    style={styles.leftIcon}
+                  />
+                </PSLinearGradientBackground>
+              ) : (
                 <Icon
                   name={_rightIconName}
-                  size={rightIconSize}
-                  color={Colors.white}
+                  size={leftIconSize}
                   style={styles.leftIcon}
                 />
-              </PSLinearGradientBackground>
-            ) : (
-              <Icon
-                name={_rightIconName}
-                size={leftIconSize}
-                style={styles.leftIcon}
-              />
-            )}
+              )}
             </>
           )}
           </>

@@ -56,7 +56,7 @@ export default function Login ({ navigation }) {
                 text={strings.loginTabButton}
                 style={styles.loginButton}
                 textStyle={styles.loginButtonText}
-                disabled={!areInputsValid}
+                // disabled={!areInputsValid}
                 onPress={() => onLoginPress(phone, password, setIsLoading, navigation)}
             />
             {isLoading && <PSLoadingOverlay navigation={navigation} /> }

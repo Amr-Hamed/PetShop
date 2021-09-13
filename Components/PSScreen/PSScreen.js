@@ -11,7 +11,8 @@ export default function PSScreen ({
   headerProps,
   children,
   withStatusBar,
-  containerStyle
+  containerStyle,
+  navigation
 }) {
   return (
     <View style={[styles.container, containerStyle]}>
@@ -22,7 +23,7 @@ export default function PSScreen ({
           backgroundColor={Colors.lightGray}
         />
       )}
-      {withHeader && <PSHeader {...headerProps} />}
+      {withHeader && <PSHeader {...headerProps} navigation={navigation} />}
       <FlatList
         bounces={false}
         data={[children]}

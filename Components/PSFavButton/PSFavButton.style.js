@@ -9,6 +9,14 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.white,
-    position: 'absolute'
+    position: 'absolute',
+    elevation: 2,
+    shadowColor: Colors.shadowColor,
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowRadius: 4,
+    shadowOpacity: 1
   }
 })

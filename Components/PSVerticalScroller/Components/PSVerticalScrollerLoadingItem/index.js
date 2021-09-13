@@ -1,0 +1,3 @@
+import PSVerticalScrollerLoadingItem from './PSVerticalScrollerLoadingItem'
+
+export default PSVerticalScrollerLoadingItem

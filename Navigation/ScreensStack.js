@@ -11,7 +11,8 @@ import {
   Checkout,
   Address,
   BankCard,
-  CheckoutResult
+  CheckoutResult,
+  Orders
 } from '../Screens'
 
 const SCREENS = {
@@ -41,6 +42,9 @@ const SCREENS = {
   },
   [SCREENS_NAMES.CheckoutResult]: {
     screen: CheckoutResult
+  },
+  [SCREENS_NAMES.Orders]: {
+    screen: Orders
   }
 }
 

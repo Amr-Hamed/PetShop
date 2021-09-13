@@ -26,7 +26,9 @@ const icons = {
   bankCardSecondInputLeft: 'calendar-today',
   bankCardThirdInputLeft: 'lock-smart',
   bankCardForthInputLeft: 'account-box',
-  tick: 'check-bold'
+  tick: 'check-bold',
+  downChevron: 'chevron-down-circle-outline',
+  upChevron: 'chevron-up-circle-outline'
 }
 
 export default icons

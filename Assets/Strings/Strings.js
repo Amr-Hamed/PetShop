@@ -56,7 +56,18 @@ const strings = {
   resultSuccessTitle: 'SUCCESS!',
   resultSuccessSubitle: 'Your order has been confirmed',
   checkoutResultFirstButtonText: 'Manage my orders',
-  checkoutResultSecondButtonText: 'Home'
+  checkoutResultSecondButtonText: 'Home',
+  ordersTitle: 'Orders',
+  orderItemIdTitle: 'Id',
+  orderItemDateTitle: 'Date',
+  orderItemPriceTitle: 'Price',
+  orderItemEstimatedDeliveryDate: 'Est. Delivery',
+  orderItemNameTitle: 'Name',
+  orderItemNumberTitle: 'Number',
+  orderItemUnitPriceTitle: 'Unit price',
+  orderItemBreedTitle: 'Breed',
+  orderItemTotalPriceTitle: 'Total price',
+  homeAccTitle: 'Accessories'
 }
 
 export default strings
